@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NewOrleansChef.com - A Guide to Healthy(er) Dining in the Crescent City. Discover healthy Creole-Cajun recipes and personalized restaurant recommendations.">
+  <meta name="keywords" content="New Orleans, healthy recipes, Creole cuisine, Cajun food, diabetic-friendly, Mark Gasquet, NOLA restaurants">
+  <meta name="author" content="Mark C. Gasquet">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NewOrleansChef.com - Healthy New Orleans Cuisine">
+  <meta property="og:description" content="Cut the Fat, Cut the Salt, Keep the Flavor! Healthy Creole-Cajun recipes with personalized dining recommendations.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1604908815825-4b190e1d4f70?w=1200&q=80">
+  
+  <title>NewOrleansChef.com - Healthy New Orleans Cuisine</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚜</text></svg>">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- React & ReactDOM -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  
+  <!-- Babel Standalone for JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+    
+    body {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #FFF8DC;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #FFF8DC;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #800020;
+      border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #600018;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  
+  <!-- Load the app component -->
+  <script type="text/babel" src="./app.jsx"></script>
+  
+  <!-- Initialize Lucide icons after React renders -->
+  <script>
+    // Initialize Lucide icons after a short delay to ensure React has rendered
+    setTimeout(() => {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }, 100);
+  </script>
+</body>
+</html>

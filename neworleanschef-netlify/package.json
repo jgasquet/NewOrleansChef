@@ -1,0 +1,27 @@
+{
+  "name": "neworleanschef",
+  "version": "1.0.0",
+  "description": "NewOrleansChef.com - A Guide to Healthy(er) Dining in the Crescent City. Healthy Creole-Cajun recipes with personalized restaurant recommendations.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [
+    "new-orleans",
+    "recipes",
+    "creole",
+    "cajun",
+    "healthy-cooking",
+    "diabetic-friendly",
+    "restaurant-recommendations",
+    "nola"
+  ],
+  "author": "Mark C. Gasquet",
+  "license": "All Rights Reserved",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/neworleanschef"
+  },
+  "homepage": "https://neworleanschef.com"
+}
