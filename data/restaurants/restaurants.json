@@ -1,0 +1,442 @@
+[
+  {
+    "id": "rest-001",
+    "name": "Commander's Palace",
+    "category": "Haute Creole",
+    "neighborhood": "Garden District",
+    "address": "1403 Washington Ave, New Orleans, LA 70130",
+    "phone": "(504) 899-8221",
+    "website": "https://www.commanderspalace.com",
+    "priceRange": "$$$$",
+    "rating": 4.9,
+    "reviewCount": 3421,
+    "description": "Legendary Garden District institution. Jazz brunch, turtle soup, and impeccable service since 1893. James Beard Award winner.",
+    "cookbookMatches": [
+      {
+        "recipeId": "cmg-001",
+        "recipeName": "Chef Mark's Seafood Gumbo",
+        "matchStrength": "high",
+        "dishName": "Seafood Gumbo Commander",
+        "notes": "Their version is richer but uses similar technique with dark roux and Gulf seafood. Legendary turtle soup also available."
+      },
+      {
+        "recipeId": "cmg-004",
+        "recipeName": "Oysters Rockefeller",
+        "matchStrength": "medium",
+        "dishName": "Oysters en Brochette",
+        "notes": "While not traditional Rockefeller, their oyster preparations honor the same New Orleans tradition."
+      }
+    ],
+    "specialties": [
+      "Turtle Soup",
+      "Bread Pudding Soufflé",
+      "Jazz Brunch",
+      "Pecan-Crusted Gulf Fish"
+    ],
+    "atmosphere": "Elegant, festive, historic mansion",
+    "bestFor": ["special occasion", "jazz brunch", "fine dining", "celebration"],
+    "reservationRequired": true,
+    "dressCode": "Business casual",
+    "features": ["outdoor seating", "bar", "live jazz", "private dining"],
+    "hours": {
+      "monday": "Closed",
+      "tuesday-thursday": "11:30am-2pm, 6:30pm-9pm",
+      "friday": "11:30am-2pm, 6:30pm-10pm",
+      "saturday": "11:30am-1pm (brunch), 6:30pm-10pm",
+      "sunday": "10am-1:30pm (brunch), 6:30pm-9pm"
+    },
+    "cuisineTags": ["Creole", "Fine Dining", "Historic"],
+    "dietaryOptions": ["vegetarian options", "gluten-free available"]
+  },
+  {
+    "id": "rest-002",
+    "name": "Dooky Chase's Restaurant",
+    "category": "Soul Food & Creole",
+    "neighborhood": "Tremé",
+    "address": "2301 Orleans Ave, New Orleans, LA 70119",
+    "phone": "(504) 821-0600",
+    "website": "https://www.dookychaserestaurant.com",
+    "priceRange": "$$$",
+    "rating": 4.8,
+    "reviewCount": 2105,
+    "description": "Civil rights landmark serving Leah Chase's iconic fried chicken and gumbo z'herbes. A living piece of New Orleans history.",
+    "cookbookMatches": [
+      {
+        "recipeId": "cmg-008",
+        "recipeName": "Chicken and Sausage Gumbo",
+        "matchStrength": "very high",
+        "dishName": "Gumbo Z'Herbes (Green Gumbo)",
+        "notes": "Chef Leah's gumbo is legendary. Her traditional method parallels Chef Mark's approach with dark roux and layered flavors."
+      },
+      {
+        "recipeId": "cmg-005",
+        "recipeName": "Red Beans and Rice",
+        "matchStrength": "high",
+        "dishName": "Monday Red Beans & Rice",
+        "notes": "Served every Monday as tradition dictates. Creamy, perfectly seasoned, true NOLA style."
+      }
+    ],
+    "specialties": [
+      "Fried Chicken",
+      "Gumbo Z'Herbes",
+      "Stuffed Shrimp",
+      "Bread Pudding"
+    ],
+    "atmosphere": "Historic, elegant, cultural landmark",
+    "bestFor": ["soul food", "history buffs", "authentic creole", "special occasion"],
+    "reservationRequired": true,
+    "dressCode": "Smart casual",
+    "features": ["art gallery", "historic site", "buffet lunch"],
+    "hours": {
+      "monday": "Closed",
+      "tuesday-friday": "11am-3pm",
+      "saturday": "11am-4pm",
+      "sunday": "Closed"
+    },
+    "cuisineTags": ["Creole", "Soul Food", "Historic"],
+    "dietaryOptions": ["vegetarian options available"]
+  },
+  {
+    "id": "rest-003",
+    "name": "Cochon",
+    "category": "Contemporary Cajun",
+    "neighborhood": "Warehouse District",
+    "address": "930 Tchoupitoulas St, New Orleans, LA 70130",
+    "phone": "(504) 588-2123",
+    "website": "https://www.cochonrestaurant.com",
+    "priceRange": "$$$",
+    "rating": 4.7,
+    "reviewCount": 2845,
+    "description": "Donald Link's love letter to Cajun country. Boudin, cochon de lait, and wood-fired everything. James Beard Award winner.",
+    "cookbookMatches": [
+      {
+        "recipeId": "cmg-003",
+        "recipeName": "Shrimp and Andouille Étouffée",
+        "matchStrength": "medium",
+        "dishName": "Louisiana Cochon with Cracklins",
+        "notes": "While they focus on pork, their understanding of Cajun smothering techniques is world-class."
+      },
+      {
+        "recipeId": "cmg-002",
+        "recipeName": "Blackened Redfish with Herb Butter",
+        "matchStrength": "medium",
+        "dishName": "Wood-Grilled Redfish",
+        "notes": "Their wood-fired approach creates different but equally bold flavors as blackening."
+      }
+    ],
+    "specialties": [
+      "Boudin",
+      "Cochon de Lait",
+      "Wood-Fired Oysters",
+      "Rabbit & Dumplings"
+    ],
+    "atmosphere": "Rustic-industrial, lively, Cajun-proud",
+    "bestFor": ["cajun food", "date night", "foodie destination", "small plates"],
+    "reservationRequired": true,
+    "dressCode": "Casual",
+    "features": ["full bar", "wine list", "chef's counter"],
+    "hours": {
+      "monday-thursday": "11am-10pm",
+      "friday-saturday": "11am-11pm",
+      "sunday": "10:30am-10pm (brunch till 2:30pm)"
+    },
+    "cuisineTags": ["Cajun", "Contemporary", "James Beard"],
+    "dietaryOptions": ["some vegetarian options"]
+  },
+  {
+    "id": "rest-004",
+    "name": "Galatoire's",
+    "category": "Classic Creole French",
+    "neighborhood": "French Quarter",
+    "address": "209 Bourbon St, New Orleans, LA 70130",
+    "phone": "(504) 525-2021",
+    "website": "https://www.galatoires.com",
+    "priceRange": "$$$$",
+    "rating": 4.8,
+    "reviewCount": 1876,
+    "description": "French Quarter classic since 1905. Friday lunch is a New Orleans tradition. Jacket required downstairs.",
+    "cookbookMatches": [
+      {
+        "recipeId": "cmg-007",
+        "recipeName": "BBQ Shrimp New Orleans Style",
+        "matchStrength": "high",
+        "dishName": "Shrimp Rémoulade / Shrimp Maison",
+        "notes": "Masters of classic New Orleans shrimp preparations. Their technique is refined and traditional."
+      },
+      {
+        "recipeId": "cmg-004",
+        "recipeName": "Oysters Rockefeller",
+        "matchStrength": "medium",
+        "dishName": "Oysters en Brochette",
+        "notes": "Exceptional oyster preparations in the grand Creole tradition."
+      }
+    ],
+    "specialties": [
+      "Shrimp Rémoulade",
+      "Crabmeat Maison",
+      "Trout Meunière",
+      "Soufflé Potatoes"
+    ],
+    "atmosphere": "Grand, old-world elegance, white tablecloth",
+    "bestFor": ["special occasion", "classic creole", "friday lunch tradition", "old new orleans"],
+    "reservationRequired": true,
+    "dressCode": "Jacket required (downstairs), business casual (upstairs)",
+    "features": ["full bar", "private dining", "historic site"],
+    "hours": {
+      "tuesday-saturday": "11:30am-10pm",
+      "sunday": "12pm-10pm",
+      "monday": "Closed"
+    },
+    "cuisineTags": ["Creole", "French", "Historic", "Fine Dining"],
+    "dietaryOptions": ["limited vegetarian options"]
+  },
+  {
+    "id": "rest-005",
+    "name": "Willie Mae's Scotch House",
+    "category": "Soul Food",
+    "neighborhood": "Tremé",
+    "address": "2401 St Ann St, New Orleans, LA 70119",
+    "phone": "(504) 822-9503",
+    "website": null,
+    "priceRange": "$$",
+    "rating": 4.9,
+    "reviewCount": 4231,
+    "description": "James Beard America's Classic. Possibly the best fried chicken on the planet. Worth any wait. Cash only.",
+    "cookbookMatches": [
+      {
+        "recipeId": "cmg-005",
+        "recipeName": "Red Beans and Rice",
+        "matchStrength": "high",
+        "dishName": "Red Beans & Rice",
+        "notes": "Perfectly seasoned, creamy red beans that honor the Monday tradition."
+      }
+    ],
+    "specialties": [
+      "Fried Chicken (!!!)",
+      "Fried Pork Chops",
+      "Red Beans & Rice",
+      "Butter Beans"
+    ],
+    "atmosphere": "No-frills, neighborhood gem, soul food temple",
+    "bestFor": ["fried chicken", "soul food", "casual lunch", "worth the wait"],
+    "reservationRequired": false,
+    "dressCode": "Very casual",
+    "features": ["cash only", "counter service", "takeout"],
+    "hours": {
+      "monday": "10am-5pm",
+      "tuesday-saturday": "10am-5pm",
+      "sunday": "Closed"
+    },
+    "cuisineTags": ["Soul Food", "James Beard", "Fried Chicken"],
+    "dietaryOptions": ["limited options"]
+  },
+  {
+    "id": "rest-006",
+    "name": "Parkway Bakery & Tavern",
+    "category": "Po-Boys",
+    "neighborhood": "Mid-City",
+    "address": "538 Hagan Ave, New Orleans, LA 70119",
+    "phone": "(504) 482-3047",
+    "website": "https://www.parkwaypoorboys.com",
+    "priceRange": "$",
+    "rating": 4.8,
+    "reviewCount": 5102,
+    "description": "Best roast beef debris in the city. Gravy-soaked perfection on Leidenheimer bread since 1911. Outdoor seating under the oak tree.",
+    "cookbookMatches": [],
+    "specialties": [
+      "Roast Beef Po-Boy",
+      "Fried Shrimp Po-Boy",
+      "Surf & Turf Po-Boy",
+      "Banana Pudding"
+    ],
+    "atmosphere": "Casual, outdoor picnic tables, neighborhood tavern",
+    "bestFor": ["po-boys", "casual lunch", "local favorite", "outdoor dining"],
+    "reservationRequired": false,
+    "dressCode": "Very casual",
+    "features": ["outdoor seating", "full bar", "takeout", "family friendly"],
+    "hours": {
+      "wednesday-monday": "11am-10pm",
+      "tuesday": "Closed"
+    },
+    "cuisineTags": ["Po-Boys", "Casual", "Neighborhood Spot"],
+    "dietaryOptions": ["vegetarian po-boy available"]
+  },
+  {
+    "id": "rest-007",
+    "name": "Compère Lapin",
+    "category": "Caribbean-Creole Fusion",
+    "neighborhood": "CBD",
+    "address": "535 Tchoupitoulas St, New Orleans, LA 70130",
+    "phone": "(504) 599-2119",
+    "website": "https://www.comperelapin.com",
+    "priceRange": "$$$",
+    "rating": 4.6,
+    "reviewCount": 1623,
+    "description": "Nina Compton's Caribbean-Creole gem. Inventive, beautiful, and deeply delicious. Top Chef finalist's pride.",
+    "cookbookMatches": [
+      {
+        "recipeId": "cmg-001",
+        "recipeName": "Chef Mark's Seafood Gumbo",
+        "matchStrength": "medium",
+        "dishName": "Curried Goat",
+        "notes": "While not gumbo, Nina's approach to building complex layers mirrors traditional Creole technique."
+      }
+    ],
+    "specialties": [
+      "Curried Goat",
+      "Sweets Bread",
+      "Local Shrimp",
+      "Seasonal Vegetables"
+    ],
+    "atmosphere": "Modern, Caribbean-inspired, creative",
+    "bestFor": ["date night", "innovative cuisine", "foodie destination", "special occasion"],
+    "reservationRequired": true,
+    "dressCode": "Smart casual",
+    "features": ["full bar", "craft cocktails", "tasting menu available"],
+    "hours": {
+      "monday": "Closed",
+      "tuesday-saturday": "5:30pm-10pm",
+      "sunday": "Closed"
+    },
+    "cuisineTags": ["Caribbean", "Creole", "Contemporary", "Fine Dining"],
+    "dietaryOptions": ["vegetarian options", "vegan options available"]
+  },
+  {
+    "id": "rest-008",
+    "name": "Casamento's",
+    "category": "Oyster Bar",
+    "neighborhood": "Uptown",
+    "address": "4330 Magazine St, New Orleans, LA 70115",
+    "phone": "(504) 895-9761",
+    "website": null,
+    "priceRange": "$$",
+    "rating": 4.7,
+    "reviewCount": 1456,
+    "description": "Tile-walled oyster house since 1919. Raw oysters, oyster loaf, and fresh shucked perfection. Seasonal - closed in summer.",
+    "cookbookMatches": [
+      {
+        "recipeId": "cmg-004",
+        "recipeName": "Oysters Rockefeller",
+        "matchStrength": "very high",
+        "dishName": "Oyster Loaf",
+        "notes": "While they don't do Rockefeller, their oyster preparations are legendary. The oyster loaf is iconic."
+      },
+      {
+        "recipeId": "cmg-001",
+        "recipeName": "Chef Mark's Seafood Gumbo",
+        "matchStrength": "high",
+        "dishName": "Oyster Stew",
+        "notes": "Their oyster stew has the richness and care of Chef Mark's seafood preparations."
+      }
+    ],
+    "specialties": [
+      "Oyster Loaf",
+      "Raw Oysters",
+      "Oyster Stew",
+      "Fried Oyster Platter"
+    ],
+    "atmosphere": "Classic white tile, neighborhood institution, no-frills",
+    "bestFor": ["oyster lovers", "classic nola", "casual dining", "local tradition"],
+    "reservationRequired": false,
+    "dressCode": "Very casual",
+    "features": ["counter seating", "cash preferred", "seasonal (closed June-August)"],
+    "hours": {
+      "september-may": "Tuesday-Saturday 11am-8pm",
+      "june-august": "Closed for summer",
+      "sunday-monday": "Closed"
+    },
+    "cuisineTags": ["Oyster Bar", "Seafood", "Historic"],
+    "dietaryOptions": ["limited options"]
+  },
+  {
+    "id": "rest-009",
+    "name": "Jacques-Imo's Cafe",
+    "category": "Contemporary Creole",
+    "neighborhood": "Carrollton",
+    "address": "8324 Oak St, New Orleans, LA 70118",
+    "phone": "(504) 861-0886",
+    "website": "https://www.jacques-imos.com",
+    "priceRange": "$$$",
+    "rating": 4.6,
+    "reviewCount": 2134,
+    "description": "Funky Carrollton spot with serious Creole chops. Alligator cheesecake, shrimp and grits, and wild energy.",
+    "cookbookMatches": [
+      {
+        "recipeId": "cmg-002",
+        "recipeName": "Blackened Redfish with Herb Butter",
+        "matchStrength": "high",
+        "dishName": "Blackened Redfish with Crab",
+        "notes": "Their blackening technique is aggressive and bold, true to the Prudhomme tradition."
+      },
+      {
+        "recipeId": "cmg-007",
+        "recipeName": "BBQ Shrimp New Orleans Style",
+        "matchStrength": "very high",
+        "dishName": "BBQ Shrimp & Alligator Sausage Cheesecake",
+        "notes": "Their shrimp and grits honors the BBQ shrimp tradition with creative twists."
+      }
+    ],
+    "specialties": [
+      "Fried Chicken",
+      "Shrimp & Grits",
+      "Alligator Cheesecake",
+      "Blackened Redfish"
+    ],
+    "atmosphere": "Funky, lively, eclectic decor, neighborhood vibe",
+    "bestFor": ["creative creole", "date night", "fun atmosphere", "adventurous eaters"],
+    "reservationRequired": true,
+    "dressCode": "Casual",
+    "features": ["full bar", "outdoor waiting area with free drink", "loud and fun"],
+    "hours": {
+      "monday-thursday": "5:30pm-10pm",
+      "friday-saturday": "5:30pm-10:30pm",
+      "sunday": "Closed"
+    },
+    "cuisineTags": ["Creole", "Contemporary", "Funky"],
+    "dietaryOptions": ["vegetarian options"]
+  },
+  {
+    "id": "rest-010",
+    "name": "Coop's Place",
+    "category": "Cajun Dive",
+    "neighborhood": "French Quarter",
+    "address": "1109 Decatur St, New Orleans, LA 70116",
+    "phone": "(504) 525-9053",
+    "website": null,
+    "priceRange": "$",
+    "rating": 4.5,
+    "reviewCount": 3241,
+    "description": "No-frills Quarter dive with serious Cajun cooking. Rabbit jambalaya, fried chicken, and cold beer. Cash only.",
+    "cookbookMatches": [
+      {
+        "recipeId": "cmg-008",
+        "recipeName": "Chicken and Sausage Gumbo",
+        "matchStrength": "high",
+        "dishName": "Rabbit, Chicken & Sausage Jambalaya",
+        "notes": "Their jambalaya has the same soul as Chef Mark's gumbo - dark, rich, and deeply flavored."
+      },
+      {
+        "recipeId": "cmg-006",
+        "recipeName": "Crawfish Étouffée",
+        "matchStrength": "high",
+        "dishName": "Crawfish Étouffée",
+        "notes": "Old-school Cajun preparation. Thick, rich, and loaded with Louisiana crawfish."
+      }
+    ],
+    "specialties": [
+      "Rabbit Jambalaya",
+      "Fried Chicken",
+      "Crawfish Étouffée",
+      "Red Beans & Rice"
+    ],
+    "atmosphere": "Dive bar, loud, local favorite, quarters dive authenticity",
+    "bestFor": ["cheap eats", "late night", "authentic cajun", "no pretense"],
+    "reservationRequired": false,
+    "dressCode": "Very casual",
+    "features": ["cash only", "full bar", "late night", "counter seating"],
+    "hours": {
+      "everyday": "11am-3am (kitchen till 1am)"},
+    "cuisineTags": ["Cajun", "Dive Bar", "Cheap Eats"],
+    "dietaryOptions": ["limited options"]
+  }
+]

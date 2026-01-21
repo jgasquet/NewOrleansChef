@@ -1,0 +1,327 @@
+{
+  "cuisines": [
+    {
+      "id": "creole",
+      "name": "Creole",
+      "icon": "🍲",
+      "description": "French-influenced sophistication meets Louisiana soul. Gumbos, étouffées, and generations of family recipes.",
+      "count": 124
+    },
+    {
+      "id": "cajun",
+      "name": "Cajun",
+      "icon": "🦐",
+      "description": "Bold, rustic flavors from the bayou. Boudin, crawfish boils, and smoky andouille sausage.",
+      "count": 89
+    },
+    {
+      "id": "soul",
+      "name": "Soul Food",
+      "icon": "🍗",
+      "description": "Comfort food traditions. Fried chicken, collard greens, and biscuits that melt in your mouth.",
+      "count": 67
+    },
+    {
+      "id": "seafood",
+      "name": "Gulf Seafood",
+      "icon": "🦪",
+      "description": "Fresh from the Gulf. Oysters Rockefeller, blackened redfish, and the finest shrimp dishes.",
+      "count": 156
+    },
+    {
+      "id": "poboys",
+      "name": "Po-Boys & Sandwiches",
+      "icon": "🥖",
+      "description": "The city's iconic sandwich. Crispy French bread loaded with fried shrimp, oysters, or roast beef debris.",
+      "count": 203
+    },
+    {
+      "id": "fine",
+      "name": "Fine Dining",
+      "icon": "✨",
+      "description": "White tablecloth elegance. James Beard winners and culinary artistry in historic settings.",
+      "count": 45
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "commanders-palace",
+      "name": "Commander's Palace",
+      "cuisines": ["creole", "fine"],
+      "neighborhood": "Garden District",
+      "address": "1403 Washington Avenue, New Orleans, LA 70130",
+      "coordinates": {
+        "lat": 29.9289,
+        "lng": -90.0864
+      },
+      "rating": 4.9,
+      "priceLevel": "$$$$",
+      "description": "Legendary Garden District institution. Jazz brunch, turtle soup, and impeccable service since 1893.",
+      "specialties": ["Turtle Soup", "25-Cent Martinis", "Jazz Brunch", "Pecan Crusted Fish"],
+      "phone": "(504) 899-8221",
+      "website": "https://www.commanderspalace.com",
+      "hours": {
+        "monday": "11:30-14:00, 18:00-21:00",
+        "tuesday": "11:30-14:00, 18:00-21:00",
+        "wednesday": "11:30-14:00, 18:00-21:00",
+        "thursday": "11:30-14:00, 18:00-21:00",
+        "friday": "11:30-14:00, 18:00-21:30",
+        "saturday": "10:00-14:00, 18:00-21:30",
+        "sunday": "10:00-14:00, 18:00-21:00"
+      },
+      "featured": true,
+      "jamesBeard": true
+    },
+    {
+      "id": "dooky-chases",
+      "name": "Dooky Chase's Restaurant",
+      "cuisines": ["creole", "soul"],
+      "neighborhood": "Tremé",
+      "address": "2301 Orleans Avenue, New Orleans, LA 70119",
+      "coordinates": {
+        "lat": 29.9669,
+        "lng": -90.0694
+      },
+      "rating": 4.8,
+      "priceLevel": "$$$",
+      "description": "Civil rights landmark serving Leah Chase's iconic fried chicken and gumbo z'herbes.",
+      "specialties": ["Fried Chicken", "Gumbo Z'Herbes", "Stuffed Shrimp"],
+      "phone": "(504) 821-0600",
+      "website": "https://www.dookychaserestaurant.com",
+      "hours": {
+        "monday": "Closed",
+        "tuesday": "11:00-15:00",
+        "wednesday": "11:00-15:00",
+        "thursday": "11:00-15:00, 17:00-21:00",
+        "friday": "11:00-15:00, 17:00-21:00",
+        "saturday": "Closed",
+        "sunday": "Closed"
+      },
+      "featured": true,
+      "historicLandmark": true
+    },
+    {
+      "id": "cochon",
+      "name": "Cochon",
+      "cuisines": ["cajun"],
+      "neighborhood": "Warehouse District",
+      "address": "930 Tchoupitoulas Street, New Orleans, LA 70130",
+      "coordinates": {
+        "lat": 29.9417,
+        "lng": -90.0767
+      },
+      "rating": 4.7,
+      "priceLevel": "$$$",
+      "description": "Donald Link's love letter to Cajun country. Boudin, cochon de lait, and wood-fired everything.",
+      "specialties": ["Cochon de Lait", "Wood-Fired Oysters", "Boudin", "Rabbit & Dumplings"],
+      "phone": "(504) 588-2123",
+      "website": "https://www.cochonrestaurant.com",
+      "hours": {
+        "monday": "11:00-22:00",
+        "tuesday": "11:00-22:00",
+        "wednesday": "11:00-22:00",
+        "thursday": "11:00-22:00",
+        "friday": "11:00-22:00",
+        "saturday": "10:30-22:00",
+        "sunday": "10:30-22:00"
+      },
+      "featured": true,
+      "jamesBeard": false
+    },
+    {
+      "id": "galatoires",
+      "name": "Galatoire's",
+      "cuisines": ["creole", "fine"],
+      "neighborhood": "French Quarter",
+      "address": "209 Bourbon Street, New Orleans, LA 70130",
+      "coordinates": {
+        "lat": 29.9549,
+        "lng": -90.0675
+      },
+      "rating": 4.8,
+      "priceLevel": "$$$$",
+      "description": "French Quarter classic since 1905. Friday lunch is a New Orleans tradition. Jacket required.",
+      "specialties": ["Shrimp Remoulade", "Crabmeat Maison", "Trout Meuniere", "Oysters Rockefeller"],
+      "phone": "(504) 525-2021",
+      "website": "https://www.galatoires.com",
+      "hours": {
+        "monday": "Closed",
+        "tuesday": "11:30-21:00",
+        "wednesday": "11:30-21:00",
+        "thursday": "11:30-21:00",
+        "friday": "11:30-21:00",
+        "saturday": "11:30-21:00",
+        "sunday": "12:00-21:00"
+      },
+      "featured": true,
+      "dressCode": "Jacket required after 17:00"
+    },
+    {
+      "id": "willie-maes",
+      "name": "Willie Mae's Scotch House",
+      "cuisines": ["soul"],
+      "neighborhood": "Tremé",
+      "address": "2401 St. Ann Street, New Orleans, LA 70119",
+      "coordinates": {
+        "lat": 29.9671,
+        "lng": -90.0688
+      },
+      "rating": 4.9,
+      "priceLevel": "$$",
+      "description": "James Beard America's Classic. Possibly the best fried chicken on the planet. Worth any wait.",
+      "specialties": ["Fried Chicken", "Red Beans & Rice", "Butter Beans", "Cornbread"],
+      "phone": "(504) 822-9503",
+      "website": "https://www.williemaesscotchhouse.com",
+      "hours": {
+        "monday": "10:00-17:00",
+        "tuesday": "10:00-17:00",
+        "wednesday": "10:00-17:00",
+        "thursday": "10:00-17:00",
+        "friday": "10:00-17:00",
+        "saturday": "Closed",
+        "sunday": "Closed"
+      },
+      "featured": true,
+      "jamesBeard": true
+    },
+    {
+      "id": "compere-lapin",
+      "name": "Compère Lapin",
+      "cuisines": ["creole", "fine"],
+      "neighborhood": "CBD",
+      "address": "535 Tchoupitoulas Street, New Orleans, LA 70130",
+      "coordinates": {
+        "lat": 29.9449,
+        "lng": -90.0748
+      },
+      "rating": 4.6,
+      "priceLevel": "$$$",
+      "description": "Nina Compton's Caribbean-Creole gem. Inventive, beautiful, and deeply delicious.",
+      "specialties": ["Curried Goat", "Hamachi Crudo", "Gnocchi", "Confit Duck Leg"],
+      "phone": "(504) 599-2119",
+      "website": "https://www.comperelapin.com",
+      "hours": {
+        "monday": "Closed",
+        "tuesday": "Closed",
+        "wednesday": "17:30-21:00",
+        "thursday": "17:30-21:00",
+        "friday": "17:30-22:00",
+        "saturday": "17:30-22:00",
+        "sunday": "10:00-14:00"
+      },
+      "featured": true,
+      "jamesBeard": false
+    },
+    {
+      "id": "casamentos",
+      "name": "Casamento's",
+      "cuisines": ["seafood"],
+      "neighborhood": "Uptown",
+      "address": "4330 Magazine Street, New Orleans, LA 70115",
+      "coordinates": {
+        "lat": 29.9202,
+        "lng": -90.0928
+      },
+      "rating": 4.7,
+      "priceLevel": "$$",
+      "description": "Tile-walled oyster house since 1919. Raw oysters, oyster loaf, and fresh shucked perfection.",
+      "specialties": ["Raw Oysters", "Oyster Loaf", "Oyster Stew", "Fried Oyster Plate"],
+      "phone": "(504) 895-9761",
+      "website": null,
+      "hours": {
+        "monday": "Closed",
+        "tuesday": "11:00-14:00, 17:30-20:00",
+        "wednesday": "11:00-14:00, 17:30-20:00",
+        "thursday": "11:00-14:00, 17:30-20:00",
+        "friday": "11:00-14:00, 17:30-21:00",
+        "saturday": "11:00-21:00",
+        "sunday": "Closed"
+      },
+      "featured": true,
+      "seasonal": "Closed June-August"
+    },
+    {
+      "id": "parkway-bakery",
+      "name": "Parkway Bakery & Tavern",
+      "cuisines": ["poboys"],
+      "neighborhood": "Mid-City",
+      "address": "538 Hagan Avenue, New Orleans, LA 70119",
+      "coordinates": {
+        "lat": 29.9876,
+        "lng": -90.0873
+      },
+      "rating": 4.8,
+      "priceLevel": "$",
+      "description": "Best roast beef debris in the city. Gravy-soaked perfection on Leidenheimer bread since 1911.",
+      "specialties": ["Roast Beef Debris Po-Boy", "Fried Shrimp Po-Boy", "Surf & Turf Po-Boy"],
+      "phone": "(504) 482-3047",
+      "website": "https://www.parkwaypoorboys.com",
+      "hours": {
+        "monday": "Closed",
+        "tuesday": "Closed",
+        "wednesday": "11:00-22:00",
+        "thursday": "11:00-22:00",
+        "friday": "11:00-22:00",
+        "saturday": "11:00-22:00",
+        "sunday": "11:00-22:00"
+      },
+      "featured": true
+    }
+  ],
+  "experiences": [
+    {
+      "id": "cooking-class",
+      "name": "Cooking Classes",
+      "icon": "👨‍🍳",
+      "description": "Master the art of making a proper roux, learn gumbo secrets from local chefs, and take NOLA flavors home.",
+      "priceFrom": 85,
+      "duration": "3 hours",
+      "groupSize": "4-12 people"
+    },
+    {
+      "id": "food-tour",
+      "name": "Food Walking Tours",
+      "icon": "🚶",
+      "description": "Explore the French Quarter and beyond with expert guides who know every hidden kitchen and local legend.",
+      "priceFrom": 65,
+      "duration": "3 hours",
+      "groupSize": "8-15 people"
+    },
+    {
+      "id": "wine-dine",
+      "name": "Wine & Dine Pairings",
+      "icon": "🍷",
+      "description": "Curated multi-course dinners with sommelier-selected wines at the city's most celebrated restaurants.",
+      "priceFrom": 150,
+      "duration": "2.5 hours",
+      "groupSize": "6-20 people"
+    },
+    {
+      "id": "crawfish-boil",
+      "name": "Crawfish Boil Experience",
+      "icon": "🦞",
+      "description": "The quintessential Louisiana tradition. Join a backyard boil with all the fixings and cold beverages.",
+      "priceFrom": 55,
+      "duration": "2 hours",
+      "groupSize": "10-30 people"
+    },
+    {
+      "id": "jazz-brunch",
+      "name": "Jazz Brunch",
+      "icon": "🎺",
+      "description": "Live jazz, bottomless mimosas, and the city's best brunch spreads. A true New Orleans Sunday ritual.",
+      "priceFrom": 75,
+      "duration": "2 hours",
+      "groupSize": "2-50 people"
+    },
+    {
+      "id": "market-tour",
+      "name": "Market Tours",
+      "icon": "🏪",
+      "description": "Early morning trips to the French Market and local purveyors with a chef guide. Includes tastings.",
+      "priceFrom": 45,
+      "duration": "2.5 hours",
+      "groupSize": "6-12 people"
+    }
+  ]
+}

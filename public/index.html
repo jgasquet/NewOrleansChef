@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Orleans Chef | Discover the Soul of NOLA Cuisine</title>
+    <meta name="description" content="Your gateway to New Orleans' legendary food scene. Powered by Chef Mark Gasquet's cookbook - discover restaurants, book tables, and experience authentic NOLA cooking.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="iron-pattern"></div>
+
+    <!-- Cuisine Modal -->
+    <div class="cuisine-modal-overlay" id="cuisineModal">
+        <div class="cuisine-modal">
+            <div class="cuisine-modal-header">
+                <div>
+                    <h2 class="cuisine-modal-title" id="modalTitle">Creole <em>Restaurants</em></h2>
+                    <p class="cuisine-modal-subtitle" id="modalSubtitle">124 spots serving authentic Creole cuisine</p>
+                    <p class="cookbook-badge" id="cookbookBadge"></p>
+                </div>
+                <button class="cuisine-modal-close" onclick="closeModal()">✕</button>
+            </div>
+            <div class="cuisine-modal-grid" id="modalGrid">
+                <!-- Recommendations inserted by JS -->
+            </div>
+            <div class="cuisine-modal-cta">
+                <p>Can't find what you're looking for?</p>
+                <a href="mailto:john@nthtrip.com?subject=Restaurant%20Recommendation%20Request%20-%20New%20Orleans%20Chef" class="btn btn-primary">Request a Recommendation</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recipe Modal -->
+    <div class="cuisine-modal-overlay" id="recipeModal">
+        <div class="cuisine-modal">
+            <div class="cuisine-modal-header">
+                <div>
+                    <h2 class="cuisine-modal-title" id="recipeModalTitle"></h2>
+                    <p class="cuisine-modal-subtitle" id="recipeModalSubtitle"></p>
+                    <p class="cookbook-badge">✨ From Chef Mark Gasquet's "Healthy New Orleans Cuisine"</p>
+                </div>
+                <button class="cuisine-modal-close" onclick="closeRecipeModal()">✕</button>
+            </div>
+            <div id="recipeModalContent"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="#" class="logo">
+            <div class="logo-icon">N</div>
+            <div class="logo-text">NEW ORLEANS<span>CHEF</span></div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#cuisines">Cuisines</a></li>
+            <li><a href="#cookbook">Cookbook</a></li>
+            <li><a href="#restaurants">Restaurants</a></li>
+            <li><a href="#app">Get the App</a></li>
+            <li><a href="mailto:john@nthtrip.com?subject=Table%20Reservation%20Request%20-%20New%20Orleans%20Chef" class="nav-cta">Book a Table</a></li>
+        </ul>
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-texture"></div>
+        <div class="hero-content">
+            <span class="hero-badge">Chef Mark Gasquet's Legacy</span>
+            <h1>Discover the <em>Soul</em> of<br>New Orleans Cuisine</h1>
+            <p class="hero-subtitle">From Chef Mark's legendary recipes to the restaurants that honor them—explore the tastes that make NOLA the culinary capital of the South.</p>
+            <div class="hero-cta">
+                <a href="#cookbook" class="btn btn-primary">Explore the Cookbook</a>
+                <a href="#restaurants" class="btn btn-secondary">Find Restaurants</a>
+            </div>
+        </div>
+        <div class="hero-scroll">Scroll</div>
+    </section>
+
+    <!-- Cookbook Section (NEW) -->
+    <section class="cookbook-section" id="cookbook">
+        <div class="section-header">
+            <span class="section-badge">Chef Mark Gasquet's Legacy</span>
+            <h2 class="section-title">The <em>Cookbook</em></h2>
+            <p class="section-desc">Discover authentic New Orleans recipes from "Healthy New Orleans Cuisine" — then find the restaurants that do them justice.</p>
+        </div>
+        
+        <div class="recipe-grid" id="recipeGrid">
+            <!-- Recipes loaded by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Featured Cuisines -->
+    <section class="featured" id="cuisines">
+        <div class="section-header">
+            <span class="section-badge">Culinary Traditions</span>
+            <h2 class="section-title">Taste the <em>Traditions</em></h2>
+        </div>
+        
+        <div class="cuisine-grid">
+            <div class="cuisine-card creole" onclick="openCuisineModal('creole')">
+                <div class="cuisine-bg"></div>
+                <span class="cuisine-count" id="creole-count">Loading...</span>
+                <div class="cuisine-content">
+                    <div class="cuisine-icon">🍲</div>
+                    <h3 class="cuisine-name">Creole</h3>
+                    <p class="cuisine-desc">French-influenced sophistication meets Louisiana soul. Gumbos, étouffées, and generations of family recipes.</p>
+                </div>
+            </div>
+
+            <div class="cuisine-card cajun" onclick="openCuisineModal('cajun')">
+                <div class="cuisine-bg"></div>
+                <span class="cuisine-count" id="cajun-count">Loading...</span>
+                <div class="cuisine-content">
+                    <div class="cuisine-icon">🦐</div>
+                    <h3 class="cuisine-name">Cajun</h3>
+                    <p class="cuisine-desc">Bold, rustic flavors from the bayou. Boudin, crawfish boils, and smoky andouille sausage.</p>
+                </div>
+            </div>
+
+            <div class="cuisine-card soul" onclick="openCuisineModal('soul')">
+                <div class="cuisine-bg"></div>
+                <span class="cuisine-count" id="soul-count">Loading...</span>
+                <div class="cuisine-content">
+                    <div class="cuisine-icon">🍗</div>
+                    <h3 class="cuisine-name">Soul Food</h3>
+                    <p class="cuisine-desc">Comfort food traditions. Fried chicken, collard greens, and biscuits that melt in your mouth.</p>
+                </div>
+            </div>
+
+            <div class="cuisine-card seafood" onclick="openCuisineModal('seafood')">
+                <div class="cuisine-bg"></div>
+                <span class="cuisine-count" id="seafood-count">Loading...</span>
+                <div class="cuisine-content">
+                    <div class="cuisine-icon">🦪</div>
+                    <h3 class="cuisine-name">Gulf Seafood</h3>
+                    <p class="cuisine-desc">Fresh from the Gulf. Oysters Rockefeller, blackened redfish, and the finest shrimp dishes.</p>
+                </div>
+            </div>
+
+            <div class="cuisine-card poboys" onclick="openCuisineModal('poboys')">
+                <div class="cuisine-bg"></div>
+                <span class="cuisine-count" id="poboys-count">Loading...</span>
+                <div class="cuisine-content">
+                    <div class="cuisine-icon">🥖</div>
+                    <h3 class="cuisine-name">Po-Boys & Sandwiches</h3>
+                    <p class="cuisine-desc">The city's iconic sandwich. Crispy French bread loaded with fried shrimp, oysters, or roast beef debris.</p>
+                </div>
+            </div>
+
+            <div class="cuisine-card fine" onclick="openCuisineModal('fine')">
+                <div class="cuisine-bg"></div>
+                <span class="cuisine-count" id="fine-count">Loading...</span>
+                <div class="cuisine-content">
+                    <div class="cuisine-icon">✨</div>
+                    <h3 class="cuisine-name">Fine Dining</h3>
+                    <p class="cuisine-desc">White tablecloth elegance. James Beard winners and culinary artistry in historic settings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Restaurants -->
+    <section class="restaurants" id="restaurants">
+        <div class="section-header">
+            <span class="section-badge">Where to Dine</span>
+            <h2 class="section-title">Featured <em>Restaurants</em></h2>
+        </div>
+
+        <div class="restaurant-list" id="restaurantList">
+            <!-- Restaurants loaded by JavaScript -->
+        </div>
+    </section>
+
+    <!-- App Preview -->
+    <section class="app-preview" id="app">
+        <div class="app-preview-bg"></div>
+        <div class="app-preview-content">
+            <div class="app-preview-text">
+                <span class="section-badge">Coming Soon</span>
+                <h2 class="section-title">NOLA Dining in<br>Your <em>Pocket</em></h2>
+                <p class="app-preview-desc">The New Orleans Chef app puts Chef Mark's cookbook and the city's entire culinary scene at your fingertips. Discover restaurants, browse recipes, book tables instantly, and unlock exclusive experiences.</p>
+                <div class="app-features">
+                    <div class="app-feature">
+                        <span class="app-feature-icon">✓</span>
+                        <span>Chef Mark's complete cookbook with restaurant matches</span>
+                    </div>
+                    <div class="app-feature">
+                        <span class="app-feature-icon">✓</span>
+                        <span>Instant reservations at 500+ restaurants</span>
+                    </div>
+                    <div class="app-feature">
+                        <span class="app-feature-icon">✓</span>
+                        <span>Personalized recommendations based on your taste</span>
+                    </div>
+                    <div class="app-feature">
+                        <span class="app-feature-icon">✓</span>
+                        <span>Exclusive deals and chef's table experiences</span>
+                    </div>
+                </div>
+                <a href="#newsletter" class="btn btn-primary">Join the Waitlist</a>
+            </div>
+            <div class="phone-mockup">
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <div class="phone-header">
+                            <p class="phone-greeting">Good evening, Chef</p>
+                            <h3 class="phone-title">What are you craving?</h3>
+                        </div>
+                        <div class="phone-search">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                            Search recipes, restaurants...
+                        </div>
+                        <div class="phone-cards">
+                            <div class="phone-card">
+                                <h4 class="phone-card-name">🍲 Chef Mark's Gumbo</h4>
+                                <p class="phone-card-detail">View recipe → Find restaurants</p>
+                            </div>
+                            <div class="phone-card">
+                                <h4 class="phone-card-name">Commander's Palace</h4>
+                                <p class="phone-card-detail">Table for 4 • Tonight 7:30 PM</p>
+                            </div>
+                            <div class="phone-card">
+                                <h4 class="phone-card-name">🔥 Trending Near You</h4>
+                                <p class="phone-card-detail">Willie Mae's • 0.4 mi • Open now</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" id="newsletter">
+        <h2 class="newsletter-title">Stay Hungry, Stay Updated</h2>
+        <p class="newsletter-desc">Get weekly recipes from Chef Mark's cookbook, restaurant recommendations, and first access to culinary events.</p>
+        <form class="newsletter-form" id="newsletterForm">
+            <input type="email" name="email" class="newsletter-input" placeholder="Enter your email" required>
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <div class="logo-icon">N</div>
+                    <div class="logo-text">NEW ORLEANS<span>CHEF</span></div>
+                </a>
+                <p class="footer-desc">Your guide to the soul of New Orleans cuisine. Powered by Chef Mark Gasquet's "Healthy New Orleans Cuisine" — connecting his legendary recipes to the restaurants that honor them.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="#cookbook">The Cookbook</a></li>
+                    <li><a href="#cuisines">Cuisines</a></li>
+                    <li><a href="#restaurants">Restaurants</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>For Restaurants</h4>
+                <ul class="footer-links">
+                    <li><a href="mailto:john@nthtrip.com?subject=Claim%20My%20Restaurant%20Listing%20-%20New%20Orleans%20Chef">Claim Your Listing</a></li>
+                    <li><a href="mailto:john@nthtrip.com?subject=Partnership%20Inquiry%20-%20New%20Orleans%20Chef">Partner With Us</a></li>
+                    <li><a href="mailto:john@nthtrip.com?subject=Advertising%20Inquiry%20-%20New%20Orleans%20Chef">Advertising</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="mailto:john@nthtrip.com?subject=New%20Orleans%20Chef%20Inquiry">Contact</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 New Orleans Chef. All rights reserved.</p>
+            <p class="footer-powered">Powered by <a href="https://getnth.com" target="_blank">GetNth</a></p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
