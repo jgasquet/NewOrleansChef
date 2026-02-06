@@ -1,12 +1,14 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function HomePage() {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     setMounted(true);
@@ -14,7 +16,19 @@ export default function HomePage() {
       setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    // Close dropdown when clicking outside
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, []);
 
   const cuisines = [
@@ -35,7 +49,7 @@ export default function HomePage() {
   ];
 
   return (
-    <main className="min-h-screen bg-cream">
+    <main className="min-h-screen bg-cream" suppressHydrationWarning>
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         !mounted ? 'bg-gradient-to-b from-black/95 to-transparent' : scrolled ? 'bg-black/98 backdrop-blur-lg' : 'bg-gradient-to-b from-black/95 to-transparent'
@@ -51,14 +65,70 @@ export default function HomePage() {
           </Link>
 
           <div className="hidden md:flex gap-8 items-center">
-            <Link href="/restaurants" className="text-cream hover:text-gold transition-colors">Restaurants</Link>
-            <Link href="/events" className="text-cream hover:text-gold transition-colors">Events</Link>
-            <Link href="/experiences" className="text-cream hover:text-gold transition-colors">Experiences</Link>
-            <Link 
-              href="/book" 
+            <Link href="/restaurants/commanders-palace" className="text-cream hover:text-gold transition-colors">Restaurants</Link>
+            <Link href="/events/evt-1" className="text-cream hover:text-gold transition-colors">Events</Link>
+
+            {/* Features Dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="text-cream hover:text-gold transition-colors flex items-center gap-1"
+              >
+                Features
+                <svg
+                  className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {dropdownOpen && (
+                <div className="absolute top-full right-0 mt-2 w-56 bg-black/95 border border-gold/30 rounded-lg shadow-xl overflow-hidden z-50">
+                  <Link
+                    href="/survey"
+                    className="flex items-center gap-3 px-4 py-3 text-cream hover:bg-gold/10 hover:text-gold transition-colors border-b border-gold/10"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    <span className="text-xl">🍽️</span>
+                    <div>
+                      <div className="font-medium">Taste Survey</div>
+                      <div className="text-xs text-cream/60">Find your flavor profile</div>
+                    </div>
+                  </Link>
+                  <Link
+                    href="/rides"
+                    className="flex items-center gap-3 px-4 py-3 text-cream hover:bg-gold/10 hover:text-gold transition-colors border-b border-gold/10"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    <span className="text-xl">🚗</span>
+                    <div>
+                      <div className="font-medium">Compare Rides</div>
+                      <div className="text-xs text-cream/60">Uber, Lyft & more</div>
+                    </div>
+                  </Link>
+                  <Link
+                    href="/chat"
+                    className="flex items-center gap-3 px-4 py-3 text-cream hover:bg-gold/10 hover:text-gold transition-colors"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    <span className="text-xl">💬</span>
+                    <div>
+                      <div className="font-medium">Event Chats</div>
+                      <div className="text-xs text-cream/60">Connect with foodies</div>
+                    </div>
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <Link
+              href="/survey"
               className="bg-burgundy text-cream px-6 py-2 border border-gold hover:bg-gold hover:text-burgundy-deep transition-all"
             >
-              Book a Table
+              Take Survey
             </Link>
           </div>
         </div>
@@ -234,14 +304,17 @@ export default function HomePage() {
           <p className="text-brown text-lg mb-8">
             Get weekly picks from our editors, exclusive restaurant openings, and first access to culinary events.
           </p>
-          <form className="flex flex-col sm:flex-row gap-3 justify-center">
-            <input 
-              type="email" 
-              placeholder="Enter your email" 
+          <form
+            className="flex flex-col sm:flex-row gap-3 justify-center"
+            onSubmit={(e) => e.preventDefault()}
+          >
+            <input
+              type="email"
+              placeholder="Enter your email"
               className="flex-1 max-w-md px-6 py-3 border-2 border-burgundy-deep bg-transparent text-burgundy-deep placeholder-burgundy/60 focus:outline-none focus:border-burgundy"
             />
-            <button 
-              type="submit"
+            <button
+              type="button"
               className="bg-burgundy-deep text-cream px-8 py-3 border-2 border-burgundy-deep hover:bg-transparent hover:text-burgundy-deep transition-all"
             >
               Subscribe
@@ -271,9 +344,11 @@ export default function HomePage() {
             <div>
               <h4 className="font-bebas text-lg tracking-wider text-gold mb-4">EXPLORE</h4>
               <div className="space-y-2">
-                <Link href="/restaurants" className="block text-cream-dark hover:text-gold transition-colors">Restaurants</Link>
-                <Link href="/events" className="block text-cream-dark hover:text-gold transition-colors">Events</Link>
-                <Link href="/experiences" className="block text-cream-dark hover:text-gold transition-colors">Experiences</Link>
+                <Link href="/restaurants/commanders-palace" className="block text-cream-dark hover:text-gold transition-colors">Restaurants</Link>
+                <Link href="/events/evt-1" className="block text-cream-dark hover:text-gold transition-colors">Events</Link>
+                <Link href="/survey" className="block text-cream-dark hover:text-gold transition-colors">Taste Survey</Link>
+                <Link href="/rides" className="block text-cream-dark hover:text-gold transition-colors">Compare Rides</Link>
+                <Link href="/chat" className="block text-cream-dark hover:text-gold transition-colors">Event Chats</Link>
               </div>
             </div>
 
